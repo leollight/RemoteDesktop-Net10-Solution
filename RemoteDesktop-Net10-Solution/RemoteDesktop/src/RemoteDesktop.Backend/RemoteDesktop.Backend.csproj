@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RemoteDesktop.Contracts\RemoteDesktop.Contracts.csproj" />
+    <ProjectReference Include="..\RemoteDesktop.Security\RemoteDesktop.Security.csproj" />
+    <ProjectReference Include="..\RemoteDesktop.Media\RemoteDesktop.Media.csproj" />
+    <ProjectReference Include="..\RemoteDesktop.Infrastructure\RemoteDesktop.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

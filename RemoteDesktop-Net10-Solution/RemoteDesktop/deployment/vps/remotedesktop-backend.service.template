@@ -1,0 +1,24 @@
+[Unit]
+Description=RemoteDesktop Authoritative Control Plane Backend (ASP.NET Core)
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=notify
+User=remotedesktop
+Group=remotedesktop
+WorkingDirectory=/opt/remotedesktop/backend
+EnvironmentFile=/etc/remotedesktop/server.env
+ExecStart=/usr/bin/dotnet /opt/remotedesktop/backend/RemoteDesktop.Backend.dll
+Restart=always
+RestartSec=5
+
+# Systemd hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/remotedesktop/backend/App_Data
+
+[Install]
+WantedBy=multi-user.target

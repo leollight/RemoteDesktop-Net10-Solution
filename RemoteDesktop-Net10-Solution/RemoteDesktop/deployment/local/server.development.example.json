@@ -1,0 +1,16 @@
+{
+  "Environment": "Development",
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port=5432;Database=remotedesktop_dev;Username=postgres;Password=CHANGE_ON_DEV_HOST"
+  },
+  "Relay": {
+    "Host": "",
+    "Port": 3478,
+    "Transport": "udp",
+    "Realm": "remotedesktop.local",
+    "RelayOnly": true
+  },
+  "Development": {
+    "AllowUnconfiguredTurnForNonMediaStages": true
+  }
+}

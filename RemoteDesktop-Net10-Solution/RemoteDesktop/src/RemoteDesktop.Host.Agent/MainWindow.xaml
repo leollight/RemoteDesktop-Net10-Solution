@@ -1,0 +1,10 @@
+<Window x:Class="RemoteDesktop.Host.Agent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RemoteDesktop Interactive Host Agent" Height="260" Width="460" ResizeMode="CanMinimize">
+    <StackPanel Margin="20">
+        <TextBlock Text="RemoteDesktop Interactive Host Agent" FontSize="16" FontWeight="SemiBold"/>
+        <TextBlock x:Name="StatusText" Margin="0,12,0,0" Text="Connecting to Host Service IPC..." TextWrapping="Wrap"/>
+        <TextBlock x:Name="CapabilitiesText" Margin="0,12,0,0" Foreground="DimGray" TextWrapping="Wrap"/>
+    </StackPanel>
+</Window>

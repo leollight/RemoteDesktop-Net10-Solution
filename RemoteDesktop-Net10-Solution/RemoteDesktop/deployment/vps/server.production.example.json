@@ -1,0 +1,18 @@
+{
+  "Environment": "Production",
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=127.0.0.1;Port=5432;Database=remotedesktop_prod;Username=remotedesktop_app;Password=GENERATED_DURING_VPS_PROVISIONING"
+  },
+  "Relay": {
+    "Host": "turn.your-domain.example",
+    "Port": 5349,
+    "Transport": "tls",
+    "Realm": "turn.your-domain.example",
+    "RelayOnly": true,
+    "SharedSecret": "GENERATED_DURING_TURN_INSTALL_SERVER_ONLY"
+  },
+  "Security": {
+    "RequireDeviceApproval": true,
+    "RequireMfaForSensitiveOperations": true
+  }
+}
